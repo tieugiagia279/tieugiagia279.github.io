@@ -1,8 +1,6 @@
 body{
-	display: block;
-	top: 100px;
 	width: 400px;
-	height: 300px;
+	height: 490px;
 	border: 6px solid #94b2bc;
 	border-radius: 15px;
 	display: block;
@@ -11,7 +9,7 @@ body{
 	padding-bottom: 40px;
 	background-color: #f3f6fb;
 	font-family: Consolas;
-	margin-top: 100px;
+	margin-top: 50px;
 }
 h1{
 	font-family: Consolas;
@@ -25,7 +23,11 @@ span{
 	margin: 5px;
 	padding: 5px;
 }
-
+.allow{
+	font-family: Times New Roman;
+	font-size: 18px;
+	color: gray;
+}
 input{
 	padding: 5px;
 	margin-bottom: 10px;
