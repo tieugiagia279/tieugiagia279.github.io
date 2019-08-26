@@ -5,64 +5,12 @@
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>3D Show</title>
   <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" />
-
-  <script type="text/javascript" charset="utf-8">
-    function hasClassName(inElement, inClassName)
-    {
-        var regExp = new RegExp('(?:^|\\s+)' + inClassName + '(?:\\s+|$)');
-        return regExp.test(inElement.className);
-    }
-
-    function addClassName(inElement, inClassName)
-    {
-        if (!hasClassName(inElement, inClassName))
-            inElement.className = [inElement.className, inClassName].join(' ');
-    }
-
-    function removeClassName(inElement, inClassName)
-    {
-        if (hasClassName(inElement, inClassName)) {
-            var regExp = new RegExp('(?:^|\\s+)' + inClassName + '(?:\\s+|$)', 'g');
-            var curClasses = inElement.className;
-            inElement.className = curClasses.replace(regExp, ' ');
-        }
-    }
-
-    function toggleClassName(inElement, inClassName)
-    {
-        if (hasClassName(inElement, inClassName))
-            removeClassName(inElement, inClassName);
-        else
-            addClassName(inElement, inClassName);
-    }
-
-    function toggleShape()
-    {
-      var shape = document.getElementById('shape');
-      if (hasClassName(shape, 'ring')) {
-        removeClassName(shape, 'ring');
-        addClassName(shape, 'cube');
-      } else {
-        removeClassName(shape, 'cube');
-        addClassName(shape, 'ring');
-      }
-      var stage = document.getElementById('stage');
-      if (hasClassName(shape, 'ring'))
-        stage.style.webkitTransform = 'translateZ(-200px)';
-      else
-        stage.style.webkitTransform = '';
-    }
-  </script>
+  <link rel="shortcut icon" type="image/png" href="icon/pororo.png">
+  <script type="text/javascript" src="js/3d.js"></script>
 </head>
 <body>
-  
-  <script>
-  var myVar = setInterval(myTimer, 4000);
-  function myTimer() {
-    toggleShape();
-  }
-  </script>
   <embed with="0" height="0" src="mp3/anhdoiemnay.mp3" autostart="true" loop="true">
+
   <div id="container">
     <div id="stage">
       <div id="shape" class="cube backfaces">
@@ -81,11 +29,5 @@
       </div>
     </div>
   </div>
-    <script type="text/javascript">
-    window.onload() = function Auto()
-    {
-      window.setTimeout(toggleShape(), 3000);
-    }
-  </script>
 </body>
 </html>
